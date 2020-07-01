@@ -9,32 +9,83 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h
+ * @brief Initializes program for doing statistical analyses on data for find
+ * mean, median, highest and lowest numbers
  *
- * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Pranav Sharma
+ * @date 06/30/2020
  *
  */
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
 
+void print_statistics();
+/**
+ * @brief Prints the neatly formatted analytics to the console
+ */
+
+void print_array(char data_set[], int length);
+/**
+ * @brief Prints the array to the console
+ *
+ * @param data_set[]		array that contains the data to be analyzed
+ * @param length 				size of the array
+ */
+
+int find_median(char data_set[], int length);
+/**
+ * @brief Finds the median from the provided data set
+ *
+ * @param data_set[]		array that contains the data to be analyzed
+ * @param length 				size of the array
+ *
+ * @return median value from data
+ */
+
+int mean(char data_set[], int length);
+/**
+ * @brief Finds mean from the provided data set
+ *
+ * @param data_set[]		array that contains the data to be analyzed
+ * @param length 				size of the array
+ *
+ * @return mean value from data
+ */
+
+int maximum(char data_set[], int length);
 /**
  * @brief <Add Brief Description of Function Here>
  *
  * <Add Extended Description Here>
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param data_set[]		array that contains the data to be analyzed
+ * @param length 				size of the array
  *
- * @return <Add Return Informaiton here>
+ * @return maximum value from data
  */
 
+int minimum(char data_set[], int length);
+/**
+ * @brief <Add Brief Description of Function Here>
+ *
+ * <Add Extended Description Here>
+ *
+ * @param data_set[]		array that contains the data to be analyzed
+ * @param length 				size of the array
+ *
+ * @return minimum value from data
+ */
+
+void sort_array(char data_set[], int length);
+/**
+ * @brief <Add Brief Description of Function Here>
+ *
+ * <Add Extended Description Here>
+ *
+ * @param data_set[]		array that contains the data to be analyzed
+ * @param length 				size of the array
+ */
 
 #endif /* __STATS_H__ */

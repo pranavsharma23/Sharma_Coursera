@@ -9,13 +9,12 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c
+ * @brief Initializes program for doing statistical analyses on data for find
+ * mean, median, highest and lowest numbers
  *
- * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Pranav Sharma
+ * @date 06/30/2020
  *
  */
 
@@ -40,4 +39,31 @@ void main() {
 
 }
 
-/* Add other Implementation File Code Here */
+
+void print_statistics() {
+	//
+}
+
+void print_array(char data_set[], int length) {
+	//
+}
+
+int find_median(char data_set[], int length) {
+	//
+}
+
+int mean(char data_set[], int length) {
+	//
+}
+
+int maximum(char data_set[], int length) {
+	//
+}
+
+int minimum(char data_set[], int length) {
+	//
+}
+
+void sort_array(char data_set[], int length) {
+	//
+}
