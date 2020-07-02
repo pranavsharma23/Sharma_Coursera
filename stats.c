@@ -42,28 +42,35 @@ void main() {
 
 void print_statistics() {
 	//
+
 }
 
 void print_array(char data_set[], int length) {
 	//
+
 }
 
 int find_median(char data_set[], int length) {
 	//
+
 }
 
 int mean(char data_set[], int length) {
 	//
+
 }
 
 int maximum(char data_set[], int length) {
 	//
+
 }
 
 int minimum(char data_set[], int length) {
 	//
+
 }
 
 void sort_array(char data_set[], int length) {
 	//
+	
 }

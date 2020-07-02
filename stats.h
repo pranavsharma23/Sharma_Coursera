@@ -30,16 +30,16 @@ void print_array(char data_set[], int length);
 /**
  * @brief Prints the array to the console
  *
- * @param data_set[]		array that contains the data to be analyzed
- * @param length 				size of the array
+ * @param data_set[]	array that contains the data to be analyzed
+ * @param length 			size of the array
  */
 
 int find_median(char data_set[], int length);
 /**
  * @brief Finds the median from the provided data set
  *
- * @param data_set[]		array that contains the data to be analyzed
- * @param length 				size of the array
+ * @param data_set[]	array that contains the data to be analyzed
+ * @param length 			size of the array
  *
  * @return median value from data
  */
@@ -48,8 +48,8 @@ int mean(char data_set[], int length);
 /**
  * @brief Finds mean from the provided data set
  *
- * @param data_set[]		array that contains the data to be analyzed
- * @param length 				size of the array
+ * @param data_set[]	array that contains the data to be analyzed
+ * @param length 			size of the array
  *
  * @return mean value from data
  */
@@ -60,8 +60,8 @@ int maximum(char data_set[], int length);
  *
  * <Add Extended Description Here>
  *
- * @param data_set[]		array that contains the data to be analyzed
- * @param length 				size of the array
+ * @param data_set[]	array that contains the data to be analyzed
+ * @param length 			size of the array
  *
  * @return maximum value from data
  */
@@ -72,8 +72,8 @@ int minimum(char data_set[], int length);
  *
  * <Add Extended Description Here>
  *
- * @param data_set[]		array that contains the data to be analyzed
- * @param length 				size of the array
+ * @param data_set[]	array that contains the data to be analyzed
+ * @param length 			size of the array
  *
  * @return minimum value from data
  */
@@ -84,8 +84,8 @@ void sort_array(char data_set[], int length);
  *
  * <Add Extended Description Here>
  *
- * @param data_set[]		array that contains the data to be analyzed
- * @param length 				size of the array
+ * @param data_set[]	array that contains the data to be analyzed
+ * @param length 			size of the array
  */
 
 #endif /* __STATS_H__ */
