@@ -26,66 +26,60 @@ void print_statistics();
  * @brief Prints the neatly formatted analytics to the console
  */
 
-void print_array(char data_set[], int length);
+void print_array(unsigned char *data_set, unsigned int length);
 /**
  * @brief Prints the array to the console
  *
- * @param data_set[]	array that contains the data to be analyzed
- * @param length 			size of the array
+ * @param *data_set		array that contains the data to be analyzed
+ * @param length 		size of the array
  */
 
-int find_median(char data_set[], int length);
+unsigned char find_median(unsigned char *data_set, unsigned int length);
 /**
- * @brief Finds the median from the provided data set
+ * @brief Finds the median from the provided dataset
  *
- * @param data_set[]	array that contains the data to be analyzed
- * @param length 			size of the array
+ * @param *data_set		array that contains the data to be analyzed
+ * @param length 		size of the array
  *
  * @return median value from data
  */
 
-int mean(char data_set[], int length);
+unsigned char mean(unsigned char *data_set, unsigned int length);
 /**
- * @brief Finds mean from the provided data set
+ * @brief Finds mean from the provided dataset
  *
- * @param data_set[]	array that contains the data to be analyzed
- * @param length 			size of the array
+ * @param *data_set		array that contains the data to be analyzed
+ * @param length 		size of the array
  *
- * @return mean value from data
+ * @return mean value from dataset
  */
 
-int maximum(char data_set[], int length);
+unsigned char maximum(unsigned char *data_set, unsigned int length);
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Find the maximum value from the provided dataset
  *
- * <Add Extended Description Here>
+ * @param data_set		array that contains the data to be analyzed
+ * @param length 		size of the array
  *
- * @param data_set[]	array that contains the data to be analyzed
- * @param length 			size of the array
- *
- * @return maximum value from data
+ * @return maximum value from dataset
  */
 
-int minimum(char data_set[], int length);
+unsigned char minimum(unsigned char *data_set, unsigned int length);
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Find minimum value from the provided dataset
  *
- * <Add Extended Description Here>
- *
- * @param data_set[]	array that contains the data to be analyzed
- * @param length 			size of the array
+ * @param *data_set		array that contains the data to be analyzed
+ * @param length 		size of the array
  *
  * @return minimum value from data
  */
 
-void sort_array(char data_set[], int length);
+void sort_array(unsigned char *data_set, unsigned int length);
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Sort array from largest to smallest
  *
- * <Add Extended Description Here>
- *
- * @param data_set[]	array that contains the data to be analyzed
- * @param length 			size of the array
+ * @param *data_set 	array that contains the data to be analyzed
+ * @param length 		size of the array
  */
 
 #endif /* __STATS_H__ */
