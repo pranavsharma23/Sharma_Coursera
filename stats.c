@@ -49,17 +49,22 @@ void main() {
 
 void print_statistics(unsigned char minimum, unsigned char maximum,
 					  unsigned char mean, unsigned char median) {
-	printf("Minimum value in the dataset is: %d \n", minimum);
-	printf("Maximum value in the dataset is: %d \n", maximum);
+	printf("Minimum value of the dataset is: %d \n", minimum);
+	printf("Maximum value of the dataset is: %d \n", maximum);
 	printf("   Mean value of the dataset is: %d \n", mean);
 	printf(" Median value of the dataset is: %d \n", median);
 
 }
 
 void print_array(unsigned char *data_set, unsigned int length) {
+	printf("\nThe rearranged array:\n");
+
+	printf("[");
 	for (int i = 0; i < length; i++) {
-		printf("%d \n", data_set[i]);
+		printf("%d", data_set[i]);
+		if (i < length - 1) printf(", ");
 	}
+	printf("]\n");
 }
 
 unsigned char find_median(unsigned char *data_set, unsigned int length) {
@@ -108,7 +113,7 @@ void sort_array(unsigned char *data_set, unsigned int length) {
 	while (sorted == 0) {
 		// keep rearranging the array elements
 		sorted = 1; // assume data is sorted in the beginning
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < length - 1; i++) {
 			if (data_set[i] < data_set[i+1]) {
 				sorted = 0; // data is not sorted in descending order
 				unsigned char temp = data_set[i];
