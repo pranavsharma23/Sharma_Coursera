@@ -21,9 +21,15 @@
 #define __STATS_H__
 
 
-void print_statistics();
+void print_statistics(unsigned char minimum, unsigned char maximum,
+					  unsigned char mean, unsigned char media);
 /**
  * @brief Prints the neatly formatted analytics to the console
+ *
+ * @param minimum		minimum value in the dataset
+ * @param maximum		maximum value in the dataset
+ * @param mean			mean value of the dataset
+ * @param median		median value of the dataset
  */
 
 void print_array(unsigned char *data_set, unsigned int length);
@@ -44,7 +50,7 @@ unsigned char find_median(unsigned char *data_set, unsigned int length);
  * @return median value from data
  */
 
-unsigned char mean(unsigned char *data_set, unsigned int length);
+unsigned char find_mean(unsigned char *data_set, unsigned int length);
 /**
  * @brief Finds mean from the provided dataset
  *
@@ -54,7 +60,7 @@ unsigned char mean(unsigned char *data_set, unsigned int length);
  * @return mean value from dataset
  */
 
-unsigned char maximum(unsigned char *data_set, unsigned int length);
+unsigned char find_maximum(unsigned char *data_set, unsigned int length);
 /**
  * @brief Find the maximum value from the provided dataset
  *
@@ -64,7 +70,7 @@ unsigned char maximum(unsigned char *data_set, unsigned int length);
  * @return maximum value from dataset
  */
 
-unsigned char minimum(unsigned char *data_set, unsigned int length);
+unsigned char find_minimum(unsigned char *data_set, unsigned int length);
 /**
  * @brief Find minimum value from the provided dataset
  *

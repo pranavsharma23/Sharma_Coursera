@@ -34,35 +34,47 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-	/* Other Variable Declarations Go Here */
-	/* Statistics and Printing Functions Go Here */
+	unsigned int length = SIZE;
 
+	unsigned char minimum = find_minimum(test, length);
+	unsigned char maximum = find_maximum(test, length);
+	unsigned char mean = find_mean(test, length);
+	unsigned char median = find_median(test, length);
+
+	print_statistics(minimum, maximum, mean, median);
+
+	print_array(test, length);
 }
 
 
-void print_statistics() {
-	//
+void print_statistics(unsigned char minimum, unsigned char maximum,
+					  unsigned char mean, unsigned char median) {
+	printf("Minimum value in the dataset is: %d \n", minimum);
+	printf("Maximum value in the dataset is: %d \n", maximum);
+	printf("   Mean value of the dataset is: %d \n", mean);
+	printf(" Median value of the dataset is: %d \n", median);
 
 }
 
 void print_array(unsigned char *data_set, unsigned int length) {
-	//
-
+	for (int i = 0; i < length; i++) {
+		printf("%d \n", data_set[i]);
+	}
 }
 
 unsigned char find_median(unsigned char *data_set, unsigned int length) {
 
-	sort_array(*data_set, length); // sorts array from largest to smallest
+	sort_array(data_set, length); // sorts array from largest to smallest
 
 	if (length % 2 == 0) {
-		return (*(data_set + size/2 - 1) + *(data_set + length/2));
+		return (*(data_set + length/2 - 1) + *(data_set + length/2));
 	} else {
 		return *(data_set + length/2);
 	}
 }
 
 
-unsigned char mean(unsigned char *data_set, unsigned int length) {
+unsigned char find_mean(unsigned char *data_set, unsigned int length) {
 
 	unsigned int sum = 0; // stores sum of data
 
@@ -71,20 +83,19 @@ unsigned char mean(unsigned char *data_set, unsigned int length) {
 	}
 
 	return sum/length;
-
 }
 
 
-unsigned char maximum(unsigned char *data_set, unsigned int length) {
-	sort_array(*data_set, length); // sorts array from largest to smallest
+unsigned char find_maximum(unsigned char *data_set, unsigned int length) {
+	sort_array(data_set, length); // sorts array from largest to smallest
 
 	return *data_set; // Returns the first element of the sorted array
 }
 
 
-unsigned char minimum(unsigned char *data_set, unsigned int length) {
+unsigned char find_minimum(unsigned char *data_set, unsigned int length) {
 
-	sort_array(*data_set, length); // sorts array from largest to smallest
+	sort_array(data_set, length); // sorts array from largest to smallest
 
 	return *(data_set + length - 1); // Returns the last element of the sorted array
 }
@@ -92,7 +103,6 @@ unsigned char minimum(unsigned char *data_set, unsigned int length) {
 
 void sort_array(unsigned char *data_set, unsigned int length) {
 
-	unsigned char temp_array[length];
 	int sorted = 0; // if sorted = 1, that means that data_set array is sorted
 
 	while (sorted == 0) {
